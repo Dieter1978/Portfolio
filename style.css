@@ -19,6 +19,11 @@ article {
     
   }
   
+
+  p{
+    display: inline-block;
+
+  }
   nav {
     background-color: #231A29;
     height: 80px;
