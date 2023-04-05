@@ -1,88 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
+
 /* Mobile */
 article {
     display: flex;
-    flex-wrap: wrap;
+   flex-wrap: wrap; 
   }
   
   article > * {
     width: 100%;
-    height: 300px;
+    height: 20vw;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 1.5rem;
-    font-family: sans-serif;
-    color: black;
+    font-size: 1rem;
+    font-family: 'Share Tech Mono', monospace;
+    color: rgb(0, 0, 0);
+    
+    
   }
   
   nav {
     background-color: #231A29;
     height: 80px;
+    
+
   }
   
   header {
-    /* background-color: #9C72B5; */
+    background-color: rgb(121, 112, 112);
+    font-size:3em;
   }
   
   main {
     background-color: #231A29;
     height: 400px;
+    color: white;
   }
   
   #feature-4 {
+   order: 9; 
     background-color: #553b63;
   }
   
   #feature-1 {
-
+    
+    order: 3 ;
     background-color: #654A75;
   }
   
   #feature-2 {
    
+     order: 5 ;
     background-color: rgb(125, 124, 124);
   }
   
   #feature-3 {
-
+ 
+   order: 7 ;
     background-color:#2C2033;
   }
   
   
   #Text-1 {
-
+    order: 2 ;
+    color:white;
     background-color: #654A75;
+    text-align: center;
   }
   
   #Text-2 {
-   
+    
+    order: 4 ;
+    color: white;
     background-color: rgb(125, 124, 124);
+    text-align: center;
   }
   
   #Text-3 {
-
+    
+    order: 6 ;
+    color: white;
     background-color:#2C2033;
+    text-align: center;
   }
   #Text-4 {
+    
+   order: 8 ;
+    color: white;
     background-color: #553b63;
+    text-align: center;
   }
 
-  #feature-1{ order: 1 ;}
-  #feature-2{ order: 3 ;}
-  #feature-3{ order: 5 ;}
-  #feature-4{ order: 7 ;}
-  #Text-1{ order: 2 ;}
-  #Text-2{ order: 4 ;}
-  #Text-3{ order: 6 ;}
-  #Text-4{ order: 8 ;}
+  [id^="feature-"] img{ 
+    /* width: 50%; */
+    height: 20vw;
+    border: 1px solid;
+    /* border-radius: 10%; */
+  }
+
+  img{
+    background-color: #231A29;
+  }
+
+  .triangle{
+    border-left: 10vw solid transparent;
+    border-right: 10vw solid transparent;
+    border-bottom: 20vw solid rgb(34, 5, 45);
+    border-top: -10vw solid transparent;
+    display: inline-block;
+    transform: rotate(270deg);
+
+  }
+
+  #SecondTri{
+    transform: rotate(90deg);
+  }
+
+  .circle{
+
+    position:relative;
+    border-radius: 50%;
+    border: 9vw solid transparent;
+    background: rgb(69, 62, 70);
+    z-index:11;
+sf
+  }
+
+  
+  
   main {order:9;}
   footer{order:10;}
   
   /* Tablet */
   @media only screen and (min-width: 601px) and (max-width: 960px) {
-     body > article > section {
-      width: 50%;
-      height: 50vw;
+     body > article > section >img { 
+       /* width: 20%; */
+       /* height: 20vw; */
+       
+       
+      /* margin-left: 130px ; */
+       
      }
    
   }
@@ -90,9 +147,10 @@ article {
   /* Desktop */
   @media only screen and (min-width: 961px) {
     section[id^="feature-"] {
-      flex:1;
+      /* flex:1; */
+      width: 20%;
       height:20vw;
-  
+      flex:1;   
      }
   
   
@@ -102,12 +160,19 @@ article {
   
 
     section[id^="Text-"] {
-        flex:1;
+        /* display: none; */
+        width: 100%;/* flex:1; */
         height:20vw;
-    
+        /*flex: 1;  */
+       
+        color:black;
        }
      
-    
+      #Text-1{color:black;background-color:#ffffff;}
+      #Text-2{color:black;background-color:#ffffff;}
+      #Text-3{color:black;background-color:#ffffff;}
+      /* Text-4{background-color:#ffffff;} */
+      /* #Text-4{background-color:#ffffff;} */
       
     
   
