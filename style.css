@@ -73,13 +73,13 @@ article {
   }
   
   #feature-2 {
-   
+     display:none;
      order: 3 ;
-    background-color: rgb(125, 124, 124);
+    background-color: rgb(41, 4, 57);
   }
   
   #feature-3 {
- 
+    display:none;
    order: 5 ;
     background-color:#2C2033;
   }
@@ -87,32 +87,32 @@ article {
   
   #Text-1 {
     order: 2 ;
-    height: 30vw;
-    color:white;
-    background-color: #654A75;
+    height: 30vw; 
+    color:black;
+    background-color: white;
     text-align: center;
   }
   
   #Text-2 {
     
     order: 4 ;
-    color: white;
-    background-color: rgb(125, 124, 124);
+    color: black;
+    background-color:white;
     text-align: center;
   }
   
   #Text-3 {
     
     order: 6 ;
-    color: white;
-    background-color:#2C2033;
+    color: black;
+    background-color:white;
     text-align: center;
   }
   #Text-4 {
     
    order: 8 ;
     color: white;
-    background-color: #553b63;
+    background-color: #422352;
     text-align: center;
   }
   
@@ -121,10 +121,16 @@ article {
     list-style-type: none; 
     margin: 0;
     padding: 0;
+    font-size: 1.5em;
   }
   
+ 
+
+
+
   .listA {
-      display: inline;  
+      display: inline; 
+      
   }
 
   .listB {
@@ -135,12 +141,12 @@ article {
     /* display:flex; */
     flex-direction:column;
    
-    line-height: 1.3;
-    text-align: left;
     
-  list-style-type:lower-alpha;
-  margin: 0;
-  padding: 0;
+    text-align: left;
+    font-size: 1.2em;
+  
+    margin: 0;
+    padding: 0;
   }
 
   [id^="feature-"] img{ 
@@ -154,22 +160,23 @@ article {
     background-color: #231A29;
   }
 
-  /*.triangle{
-    border-left: 10vw solid transparent;
-    border-right: 10vw solid transparent;
-    border-bottom: 20vw solid transparent;
-    border-color:#231A29;
-    /* border-top: 10vw solid transparent; 
-    display: block;
-    transform: rotate(270deg);
-    z-index :0;
-    
-
-  }*/
-
-  #SecondTri{
-    transform: rotate(90deg);
+  .triangle {
+    width: 0;
+    height: 0;
+    border-top: 4rem solid transparent;
+    border-right: 7rem solid  #2b032a;
+    border-bottom: 4rem solid transparent;
   }
+
+  #SecondTri {
+    width: 0;
+    height: 0;
+    border-top: 4rem solid transparent;
+    border-left: 7rem solid #2b032a;
+    border-bottom: 4rem solid transparent;
+  }
+
+ 
 
   .circle{
 
@@ -186,34 +193,34 @@ sf
   main {order:9;}
   footer{order:10;}
   
-  /* Tablet */
-  @media only screen and (min-width: 601px) and (max-width: 960px) {
-     body > article > section >img { 
+  /* Tablet - not really needed as design is the same*/
+  /* @media only screen and (min-width: 401px) and (max-width: 960px) { */
+     /* body > article > section >img {  */
         /* width: 20%;  */
         /* height: 40vw;  */
        
-       color:black;
+       /* color:black; */
       /* margin-left: 130px ; */
-       
-     }
+      
+     /* } */
 
-     /* header {color:black;} */
+     /* header {color:black;}  */
    
-  }
+  /* } */
   
   /* Desktop */
-  @media only screen and (min-width: 961px) {
-    section[id^="feature-"] {
+   @media only screen and (min-width: 600px) { 
+    /* section[id^="feature-"] { */
       /* flex:1; */
-      width: 20%;
-      height:20vw;
-      flex:1;   
-     }
+      /* width: 20%; */
+      /* height:20vw; */
+      /* flex:1;    */
+     /* } */
   
-  
-     
-
-     header {color:black;}
+      
+     #feature-2{display:flex;}
+     #feature-3{display:flex;}
+     /* header {color:bwhit;} */
   
 
     section[id^="Text-"] {
@@ -228,10 +235,18 @@ sf
       #Text-1{color:black;background-color:#ffffff;}
       #Text-2{color:black;background-color:#ffffff;}
       #Text-3{color:black;background-color:#ffffff;}
+
+     
       /* Text-4{background-color:#ffffff;} */
       /* #Text-4{background-color:#ffffff;} */
       
-    
+        [id^="feature-"] {
+        /* display: none; */
+        width: 100%;/* flex:1; */
+        height:20vw;
+        /*flex: 1;  */
+        
+       }
   
      
   
